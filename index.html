@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Че Гевара — психологія лідерства</title>
+<style>
+:root{--r:#d62828;--g:#f4c430;--t:#f2efe6}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;overflow:hidden;color:var(--t);font:clamp(14px,1.6vw,21px)/1.45 Georgia,serif}
+body{background:linear-gradient(120deg,#0d0d0d,#2a0a0a,#0d1a0d,#0d0d0d);background-size:300% 300%;animation:bg 20s ease infinite}
+@keyframes bg{50%{background-position:100% 50%}}
+.s{position:absolute;inset:0;display:none;padding:5vh 6vw 9vh;align-content:center;gap:2vh 4vw}
+.s.on{display:grid;animation:in .8s cubic-bezier(.2,.8,.2,1)}
+@keyframes in{from{opacity:0;transform:translateX(8vw) scale(.97)}}
+.g{grid-template-columns:1.2fr .8fr;align-items:center}
+h1,h2{font-family:Impact,'Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:.04em;line-height:1.1;color:var(--g)}
+h1{font-size:clamp(30px,6vw,78px)}
+h2{font-size:clamp(20px,3.4vw,44px);border-left:.3em solid var(--r);padding-left:.4em;margin-bottom:1.5vh}
+li{margin:.5em 0 .5em 1.3em;list-style:none}
+li::before{content:"★";color:var(--r);display:inline-block;width:1.3em;margin-left:-1.3em}
+b{color:var(--g)}small,.note{opacity:.65;font-size:.75em}
+.a{opacity:0}
+.on .a{animation:up .8s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*.17s + .25s)}
+.on .a.l{animation-name:lf}.on .a.z{animation-name:zm}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes lf{from{opacity:0;transform:translateX(-60px)}to{opacity:1;transform:none}}
+@keyframes zm{from{opacity:0;transform:scale(.5) rotate(-6deg)}to{opacity:1;transform:none}}
+.ph{position:relative;overflow:hidden;border:3px solid var(--g);border-radius:6px;aspect-ratio:4/5;max-height:68vh;background:#222;box-shadow:0 0 40px #d6282877}
+.ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(.5) contrast(1.1);animation:kb 14s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.12) translate(-2%,-2%)}}
+.ph.miss img{display:none}
+.ph.miss::before{content:attr(data-l);position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:1em;color:#999;font-size:.8em}
+.ph figcaption{position:absolute;bottom:0;left:0;right:0;padding:.4em;background:#000b;font-size:.6em;text-align:center}
+.gr{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.4vw}
+.c{background:#ffffff10;border:1px solid #f4c43055;border-radius:10px;padding:.9em 1em;transition:.3s}
+.c:hover{transform:translateY(-6px) rotate(-1deg);border-color:var(--r);box-shadow:0 8px 24px #d6282866}
+.c em{display:block;font:normal 1.5em Impact,sans-serif;color:var(--r)}
+.neg .c{border-color:#d6282899;background:#d628281a}
+.neg.on .c{animation:up .8s both,sh 1.2s ease 1.6s}
+@keyframes sh{20%,60%{transform:translateX(-5px)}40%,80%{transform:translateX(5px)}}
+.bar{height:.65em;background:#333;border-radius:9px;overflow:hidden;margin:.15em 0 .7em}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--r),var(--g))}
+.on .bar i{width:var(--w);transition:width 1.6s ease 1s}
+.n{font:700 clamp(30px,6vw,70px) Impact,sans-serif;color:var(--r);line-height:1}
+.tw{display:inline-block;width:0;overflow:hidden;white-space:nowrap;border-right:3px solid var(--g);max-width:100%}
+.on .tw{animation:tw 3s steps(36) .8s forwards}@keyframes tw{to{width:100%}}
+.pulse{animation:pl 2s ease-in-out infinite}@keyframes pl{50%{text-shadow:0 0 25px var(--r);transform:scale(1.04)}}
+#pb{position:fixed;top:0;left:0;height:4px;background:var(--r);transition:width .5s;z-index:9}
+#ct{position:fixed;right:2vw;bottom:2vh;opacity:.7;font-size:.7em;z-index:9}
+.nv{position:fixed;left:2vw;bottom:1.5vh;z-index:9}.nv button{background:#0008;color:var(--g);border:1px solid var(--g);border-radius:50%;width:2.2em;height:2.2em;margin-right:.4em;cursor:pointer;font-size:1em}
+.st{position:fixed;color:var(--r);opacity:.13;animation:fl linear infinite;pointer-events:none}
+@keyframes fl{from{transform:translateY(105vh) rotate(0)}to{transform:translateY(-12vh) rotate(360deg)}}
+@media(max-width:800px){.g{grid-template-columns:1fr}.ph{max-height:28vh;aspect-ratio:16/9}.s{overflow:auto;align-content:start}}
+</style></head><body>
+<div id="pb"></div><div id="ct"></div><div class="nv"><button onclick="go(k-1)">‹</button><button onclick="go(k+1)">›</button></div>
+
+<section class="s g"><div><p class="a">Психологія лідерства</p><h1 class="a pulse">Ернесто Че Гевара</h1><p class="a"><span class="tw">Лідер-революціонер: біографія та психологічний аналіз</span></p><p class="a" style="margin-top:3vh"><b>Підготувала: Первак Марія</b><br><small>ЛНУ імені Івана Франка · економічний факультет · група ЕКММ-11с</small></p></div>
+<figure class="ph a z" data-l="Фото: портрет Че Гевари (s1.jpg)"><img src="img/s1.jpg" alt="Че Гевара"><figcaption>Ернесто «Че» Гевара (1928–1967)</figcaption></figure></section>
+
+<section class="s"><h2 class="a">План</h2><div class="gr">
+<div class="c a"><em>01</em>Біографія: від Росаріо до Сьєрра-Маестри</div><div class="c a"><em>02</em>Формування особистості</div><div class="c a"><em>03</em>Психологічний портрет</div><div class="c a"><em>04</em>Стиль лідерства</div><div class="c a"><em>05</em>Негативні аспекти</div><div class="c a"><em>06</em>Спадщина та уроки</div></div></section>
+
+<section class="s g"><div><h2 class="a">Дитинство (1928–1950)</h2><ul>
+<li class="a l">Народився <b>14 червня 1928 р.</b> у Росаріо (Аргентина) в освіченій родині</li>
+<li class="a l">Тяжка <b>астма з дитинства</b> — постійна боротьба з тілом формує волю та самодисципліну</li>
+<li class="a l">Читав Верна, Неруду, Маркса, Фройда; грав у шахи та регбі</li>
+<li class="a l">Мати Селія — вільнодумна, з лівими поглядами: перший ціннісний вплив</li></ul></div>
+<figure class="ph a z" data-l="Фото: юний Ернесто (s3.jpg)"><img src="img/s3.jpg" alt="Юний Ернесто"><figcaption>Юний Ернесто</figcaption></figure></section>
+
+<section class="s g"><div><h2 class="a">Мотоциклетна подорож</h2><ul>
+<li class="a l"><b>1951–52:</b> мандрівка Південною Америкою з Альберто Гранадо</li>
+<li class="a l">Лепрозорій Сан-Пабло (Перу): бідність, експлуатація, хвороба — <b>емпатія стає переконанням</b></li>
+<li class="a l"><b>1953:</b> диплом лікаря — і відмова від кар’єри заради «боротьби»</li>
+<li class="a l">Висновок: зміни можливі лише через радикальні дії</li></ul></div>
+<figure class="ph a z" data-l="Фото: подорож з Гранадо (s4.jpg)"><img src="img/s4.jpg" alt="Подорож"><figcaption>Подорож з Альберто Гранадо</figcaption></figure></section>
+
+<section class="s"><h2 class="a">Гватемала, Мексика, «Гранма»</h2><div class="gr">
+<div class="c a"><em>1954</em>Гватемала: падіння уряду Арбенса за підтримки США → <b>антиімперіалізм</b> і ідея збройної боротьби</div>
+<div class="c a"><em>1955</em>Мехіко: зустріч з Фіделем Кастро — за одну ніч <b>погоджується приєднатися</b></div>
+<div class="c a"><em>1956</em>«Гранма»: висадка 82 повстанців на Кубі; після розгрому вціліла лише мала група</div></div></section>
+
+<section class="s g"><div><h2 class="a">Кубинська революція</h2><ul>
+<li class="a l">Сьєрра-Маестра: <b>від лікаря до команданте</b></li>
+<li class="a l">Створює школу, друкарню, «Радіо Ребельде» — будує не лише армію, а й спільноту</li>
+<li class="a l"><b>Грудень 1958:</b> вирішальна битва за Санта-Клару</li>
+<li class="a l"><b>1 січня 1959:</b> повалення режиму Батісти</li></ul></div>
+<figure class="ph a z" data-l="Фото: Сьєрра-Маестра (s6.jpg)"><img src="img/s6.jpg" alt="Сьєрра-Маестра"><figcaption>Сьєрра-Маестра, Куба</figcaption></figure></section>
+
+<section class="s"><h2 class="a">Після перемоги: державний діяч</h2><div class="gr">
+<div class="c a"><em>1959</em>Президент Національного банку Куби</div><div class="c a"><em>1961</em>Міністр промисловості</div><div class="c a"><em>1964</em>Виступ в ООН, дипломатичні поїздки</div>
+<div class="c a"><em>«Нова людина»</em>Моральні стимули замість матеріальних</div><div class="c a"><em>1965</em>Прощальний лист Фіделю, відхід з Куби — знову «в поле»</div></div></section>
+
+<section class="s g"><div><h2 class="a">Конго і Болівія</h2><div class="gr" style="margin-bottom:2vh">
+<div class="a"><div class="n"><span data-n="39">0</span></div>роки життя</div><div class="a"><div class="n"><span data-n="11">0</span></div>місяців у Болівії</div><div class="a"><div class="n">≈<span data-n="50">0</span></div>бійців у загоні</div></div><ul>
+<li class="a l"><b>1965, Конго:</b> провал через розбіжності з місцевими лідерами</li>
+<li class="a l"><b>1966–67, Болівія:</b> ізоляція, відсутність підтримки селян</li>
+<li class="a l"><b>8–9 жовтня 1967:</b> полон і страта в Ла-Ігері</li></ul></div><div></div></section>
+
+<section class="s g"><div><h2 class="a">Психологічний портрет</h2>
+<div class="a">Ідеалізм<div class="bar"><i style="--w:95%"></i></div></div><div class="a">Самодисципліна<div class="bar"><i style="--w:95%"></i></div></div><div class="a">Готовність до ризику<div class="bar"><i style="--w:98%"></i></div></div><div class="a">Харизма<div class="bar"><i style="--w:90%"></i></div></div><div class="a">Гнучкість і прагматизм<div class="bar"><i style="--w:40%"></i></div></div><div class="a">Терпимість до критики<div class="bar"><i style="--w:30%"></i></div></div></div>
+<div class="c a z"><b>Важливо:</b> шкали — авторська якісна інтерпретація за біографічними джерелами, а не клінічна діагностика чи кількісний тест.</div></section>
+
+<section class="s g"><div><h2 class="a">Стиль лідерства</h2><div class="gr" style="grid-template-columns:1fr 1fr">
+<div class="c a"><em>Харизматичний</em>Влада, що спирається на особисту привабливість і віру в місію (М. Вебер)</div>
+<div class="c a"><em>Трансформаційний</em>Надихав ідеєю та ідеалізованим впливом (Дж. Бернс, Б. Басс)</div>
+<div class="c a"><em>Власний приклад</em>Першим у бій, ділив тяготи з бійцями</div>
+<div class="c a"><em>Авторитарний</em>Жорсткі покарання за порушення дисципліни</div></div></div>
+<figure class="ph a z" data-l="Фото: Че та Фідель (s10.jpg)"><img src="img/s10.jpg" alt="Че і Фідель"><figcaption>Лідер серед соратників</figcaption></figure></section>
+
+<section class="s"><h2 class="a">Мотивація та цінності</h2><div class="gr">
+<div class="c a"><em>Маслоу</em>Самоактуалізація: ідея важливіша за комфорт і безпеку</div>
+<div class="c a"><em>Адлер</em>Компенсація слабкості: хвороба → надзвичайна сила волі</div>
+<div class="c a"><em>Ідеалізм</em>Справедливість і «нова людина» як життєва місія</div>
+<div class="c a"><em>Ризик</em>Готовність померти за ідею — сила і вразливість водночас</div></div><p class="note a">Психологічні рамки — інтерпретація, а не діагноз.</p></section>
+
+<section class="s"><h2 class="a">Сильні сторони лідера</h2><div class="gr">
+<div class="c a"><em>✔ Приклад</em>Вимагав від себе більше, ніж від інших</div><div class="c a"><em>✔ Бачення</em>Чітка ідея та вміння її донести</div><div class="c a"><em>✔ Лояльність</em>Бійці йшли за ним попри ризик</div><div class="c a"><em>✔ Інтелект</em>Лікар, автор, оратор, стратег</div></div></section>
+
+<section class="s neg"><h2 class="a" style="color:var(--r)">Негативні аспекти як лідера</h2><div class="gr">
+<div class="c a"><em>✖ Жорсткість</em>1959 р., фортеця Ла-Кабанья: трибунали виносили смертні вироки; кількість оскаржується</div>
+<div class="c a"><em>✖ Догматизм</em>Нетерпимість до інакомислення; табір примусової праці Гуанаакабібес</div>
+<div class="c a"><em>✖ Економіка</em>Форсована індустріалізація, падіння виробництва, ставка на моральні стимули</div>
+<div class="c a"><em>✖ Нереалістичність</em>Конго й Болівія: слабка розвідка, мало місцевої підтримки</div>
+<div class="c a"><em>✖ «Фокізм»</em>Віра, що мала група запалить революцію; романтизація насильства</div>
+<div class="c a"><em>✖ Мало зворотного зв’язку</em>Авторитарний стиль, глуха до критики команда</div></div></section>
+
+<section class="s g"><div><h2 class="a">Спадщина</h2><ul>
+<li class="a l">Для одних — <b>символ справедливості й бунту</b>, для інших — прихильник насильства й авторитаризму</li>
+<li class="a l">Фото Альберто Корди (1960) — один із найвідоміших портретів ХХ ст.</li>
+<li class="a l">Комерціалізація образу: футболки, плакати, мерч</li>
+<li class="a l">Висновок: <b>лідер-символ і лідер, що припускався помилок</b></li></ul></div>
+<figure class="ph a z" data-l="Фото: «Guerrillero Heroico» (s14.jpg)"><img src="img/s14.jpg" alt="Герільєро героїко"><figcaption>«Guerrillero Heroico», А. Корда, 1960</figcaption></figure></section>
+
+<section class="s"><h2 class="a">Висновки</h2><div class="gr" style="grid-template-columns:1fr 1fr">
+<div class="c a"><b>Чого навчитися (+)</b><ul><li>Лідерство власним прикладом</li><li>Сила ідеї та цінностей</li><li>Самодисципліна й стійкість</li></ul></div>
+<div class="c a" style="border-color:var(--r)"><b style="color:var(--r)">Чого уникати (−)</b><ul><li>Догматизму та нетерпимості</li><li>Ігнорування реальності й фактів</li><li>Відсутності зворотного зв’язку</li></ul></div></div>
+<h1 class="a pulse" style="text-align:center;font-size:clamp(24px,4vw,50px)">Дякую за увагу!</h1>
+<p class="note a">Джерела: Jon Lee Anderson, <i>Che Guevara: A Revolutionary Life</i> (1997); Е. Че Гевара, «Мотоциклетні щоденники»; J. M. Burns, <i>Leadership</i> (1978).</p></section>
+
+<script>
+const S=[...document.querySelectorAll('.s')],pb=document.getElementById('pb'),ct=document.getElementById('ct');let k=0;
+S.forEach(s=>s.querySelectorAll('.a').forEach((e,i)=>e.style.setProperty('--i',i)));
+document.querySelectorAll('.ph img').forEach(m=>{const f=()=>m.parentNode.classList.add('miss');m.complete&&!m.naturalWidth?f():m.onerror=f});
+for(let i=0;i<14;i++){const e=document.createElement('span');e.className='st';e.textContent='★';e.style.cssText=`left:${Math.random()*100}vw;font-size:${14+Math.random()*30}px;animation-duration:${14+Math.random()*16}s;animation-delay:-${Math.random()*20}s`;document.body.append(e)}
+function go(n){k=Math.max(0,Math.min(S.length-1,n));S.forEach((s,i)=>s.classList.toggle('on',i==k));pb.style.width=(k+1)/S.length*100+'%';ct.textContent=(k+1)+' / '+S.length;
+S[k].querySelectorAll('[data-n]').forEach(e=>{const n=+e.dataset.n;let t=0;const id=setInterval(()=>{t+=n/45;e.textContent=Math.round(Math.min(t,n));t>=n&&clearInterval(id)},35)});history.replaceState(0,'','#'+(k+1))}
+addEventListener('keydown',e=>{if(['ArrowRight',' ','PageDown'].includes(e.key))go(k+1);if(['ArrowLeft','PageUp'].includes(e.key))go(k-1);if(e.key=='Home')go(0);if(e.key=='End')go(S.length-1)});
+let x0;addEventListener('touchstart',e=>x0=e.touches[0].clientX);addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>50)go(k+(d<0?1:-1))});
+go((+location.hash.slice(1)||1)-1);
+</script></body></html>
